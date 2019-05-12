@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "./payments"
 
 func main() {
-	fmt.Println("Hello Payments!!!")
+	payments.Start()
 }
