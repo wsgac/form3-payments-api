@@ -6,3 +6,5 @@ Install external libraries
 ```
 go get github.com/BurntSushi/toml github.com/gorilla/mux github.com/globalsign/mgo
 ```
+
+# Running #
