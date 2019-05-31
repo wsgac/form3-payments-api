@@ -15,7 +15,7 @@ type Attributes struct {
 	BeneficiaryParty     Party              `bson:"beneficiary_party" json:"beneficiary_party"`
 	ChargesInformation   ChargesInformation `bson:"charges_information" json:"charges_information"`
 	Currency             string             `bson:"currency" json:"currency"`
-	DebtorParyt          Party              `bson:"debtor_party" json:"debtor_party"`
+	DebtorParty          Party              `bson:"debtor_party" json:"debtor_party"`
 	EndToEndReference    string             `bson:"end_to_end_reference" json:"end_to_end_reference"`
 	Fx                   Fx                 `bson:"fx" json:"fx"`
 	NumericReference     string             `bson:"numeric_reference" json:"numeric_reference"`

@@ -45,7 +45,11 @@ func ListPayments(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-	JSONResponse(w, http.StatusOK, payments)
+	JSONResponse(w, http.StatusOK, struct {
+		Data []Payment `json:"data"`
+	}{
+		payments,
+	})
 }
 
 func GetPayment(w http.ResponseWriter, r *http.Request) {
