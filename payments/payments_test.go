@@ -2,18 +2,26 @@ package payments
 
 import (
 	"bytes"
+	"fmt"
 	"net/http"
+	"os"
 	"testing"
 )
 
 func TestMain(m *testing.M) {
+	// Setup
 	config.LoadConfig()
 	config.Database = "api_test"
-	config.APIPort = 9999
+	config.APIPort = 9000
 	Start()
+	// Run tests
+	os.Exit(m.Run())
+	// Teardown
+	db.DropDatabase()
 }
 
 func TestAddPayment(t *testing.T) {
+	fmt.Println("Running test: TestAddPayment")
 	client := &http.Client{}
 	addRequestBody := `{
 		"type": "Payment",
