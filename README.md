@@ -8,3 +8,11 @@ go get github.com/BurntSushi/toml github.com/gorilla/mux github.com/globalsign/m
 ```
 
 # Running #
+```
+go build && ./form3-payments-api
+```
+
+# Running Tests #
+```
+cd payments && go test -run ''
+```
